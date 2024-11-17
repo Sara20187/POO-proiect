@@ -11,7 +11,7 @@ package ro.ugal.proiectpoo;
 public class Aparat {
     String modAlimentare;//cablu sau baterii
     String tipActionare; //manual, semi-automat, automat
-    int greutate;
+    int greutate;//kg
     String modUtilizare;//curatare, tuns, spalare, taiere, etc..
     String tipSuprafata;// pentru ce tip de suprafata e potrivit:pardoseala, geamuri, iarba, suprafete dure, etc..
     
@@ -42,7 +42,7 @@ public class Aparat {
 
     @Override
     public String toString() {
-        return "Aparat:" + "modAlimentare=" + modAlimentare + ", tipActionare=" + tipActionare + ", greutate=" + greutate + ", modUtilizare=" + modUtilizare + ", tipSuprafata=" + tipSuprafata;
+        return  "mod de alimentare=" + modAlimentare + ", tip de actionare=" + tipActionare + ", greutate=" + greutate + ", mod de utilizare=" + modUtilizare + ", tip de suprafata=" + tipSuprafata;
     }
     
 }
