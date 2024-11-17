@@ -9,11 +9,11 @@ package ro.ugal.proiectpoo;
  * @author mi358
  */
 public class AparatCuratatPardoseli extends Aparat {
-    int putereMotor;
-    int capacitateRezervor;
-    int lungimeCablu;
+    int putereMotor;//in W
+    int capacitateRezervor; // ml
+    int lungimeCablu;//m
     String functii;
-    String accesorii;
+    String firma;
     
     //constructor implicit
 
@@ -23,17 +23,17 @@ public class AparatCuratatPardoseli extends Aparat {
         capacitateRezervor=0;
         lungimeCablu=0;
         functii="Necunoscut";
-        accesorii="Necunoscut";
+        firma="Necunoscut";
     }
     //constructor cu parametrii
 
-    public AparatCuratatPardoseli(int putereMotor, int capacitateRezervor, int lungimeCablu, String functii, String accesorii, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public AparatCuratatPardoseli(int putereMotor, int capacitateRezervor, int lungimeCablu, String functii, String firma, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.putereMotor = putereMotor;
         this.capacitateRezervor = capacitateRezervor;
         this.lungimeCablu = lungimeCablu;
         this.functii = functii;
-        this.accesorii = accesorii;
+        this.firma=firma;
     }
     //constructor de copiere
 
@@ -43,12 +43,12 @@ public class AparatCuratatPardoseli extends Aparat {
         this.capacitateRezervor = other.capacitateRezervor;
         this.lungimeCablu = other.lungimeCablu;
         this.functii = other.functii;
-        this.accesorii = other.accesorii;
+        this.firma=firma;
     }
 
     @Override
     public String toString() {
-        return "AparatCuratatPardoseli:" +super.toString()+ "putereMotor=" + putereMotor + ", capacitateRezervor=" + capacitateRezervor + ", lungimeCablu=" + lungimeCablu + ", functii=" + functii + ", accesorii=" + accesorii + '}';
+        return   super.toString()+ "putere motor=" + putereMotor + ", capacitate rezervor=" + capacitateRezervor + ", lungime cablu=" + lungimeCablu + ", functii=" + functii + ", firma=" + firma ;
     }
     
     

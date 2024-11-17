@@ -12,7 +12,7 @@ public class AparatCuratatGeamuri extends Aparat {
     String firma;
     String materialLama;
     int putere;
-    int autonomie;//durata de timp in care nu necesita incarcare
+    int autonomie;//durata de timp in care nu necesita incarcare in h
     int capacitateRezervor;
 
     //constructor implicit
@@ -47,7 +47,7 @@ public class AparatCuratatGeamuri extends Aparat {
 
     @Override
     public String toString() {
-        return "AparatCuratatGeamuri:" +super.toString() + "firma=" + firma + ", materialLama=" + materialLama + ", putere=" + putere + ", autonomie=" + autonomie + ", capacitateRezervor=" + capacitateRezervor + '}';
+        return  super.toString() + "firma=" + firma + ", material lama=" + materialLama + ", putere=" + putere + ", autonomie=" + autonomie + ", capacitate rezervor=" + capacitateRezervor  ;
     }
     
 }
