@@ -35,7 +35,22 @@ public class ProiectPOO {
         System.out.println("Aparat de curatat geamuri: "+aparatCuratatGeamuri);
         System.out.println("Copie aparat de curatat geamuri: "+copieAparatCuratatGeamuri);
         
-    
-    
+        
+        Motosapa motosapaBenzina = new Motosapa();
+        Motosapa motosapaElectrica = new Motosapa("Ruris", "electric", 20, "baterii", "automat", 20, "sapa", "pamant");
+        Motosapa copieMotosapaElectrica = new Motosapa(motosapaElectrica);
+        
+        MasinaTunsIarba masinaTuns = new MasinaTunsIarba();
+        MasinaTunsIarba masinaTunsIarba = new MasinaTunsIarba("DeWalt", 1500, 2, "automat", "baterii", 20, "tuns", "iarba");
+        MasinaTunsIarba copieMasinaTunsIarba = new MasinaTunsIarba(masinaTunsIarba);
+        
+        System.out.println("Motosapa pe benzina: " + motosapaBenzina);
+        System.out.println("Motosapa electrica: " + motosapaElectrica);
+        System.out.println("Copie motosapa electrica: " + copieMotosapaElectrica);
+
+        System.out.println("Masina tuns: " + masinaTuns);
+        System.out.println("Masina tuns iarba: " + masinaTunsIarba);
+        System.out.println("Copie masina tuns iarba: " + copieMasinaTunsIarba);        
+        
     }    
 }
