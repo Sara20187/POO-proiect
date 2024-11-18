@@ -1,17 +1,49 @@
+package ro.ugal.proiectpoo;
+
+
+import ro.ugal.proiectpoo.Aparat;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ro.ugal.proiectpoo;
 
 /**
  *
  * @author deeac
  */
-class Drujbă {
+public class Drujbă extends Aparat {
+    int lungimeLama; // Lungimea lamei (în cm)
+    String tipDrujbă;   // Tipul drujbei (benzină, electrică)
+    String firma;  // Philipls
 
-    Drujbă(String benzină, String automat, int i, String tăiere, String pardoseală, int i0, String benzină0, String stihl) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // Constructor fără argumente
+    public Drujbă() {
+        super(); // Apelăm constructorul clasei părinte
+        this.lungimeLama = 0;
+        this.tipDrujbă = "Necunoscut";
+        this.firma= "Necunoscut";
     }
-    
+
+    // Constructor cu toate argumentele
+    public Drujbă(String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata, int lungimeLama, String tipDrujbă, String firma) {
+        super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
+        this.lungimeLama = lungimeLama;
+        this.tipDrujbă = tipDrujbă;
+        this.firma = firma;
+    }
+
+    // Constructor de copiere
+    public Drujbă(Drujbă altaDrujbă) {
+        super(altaDrujbă);
+        this.lungimeLama = altaDrujbă.lungimeLama;
+        this.tipDrujbă = altaDrujbă.tipDrujbă;
+        this.firma= altaDrujbă.firma;
+    }
+
+    // Metoda toString
+    @Override
+    public String toString() {
+        return "Drujbă{" + super.toString() + ", lungimeLama=" + lungimeLama + " cm, tipDrujbă='" + tipDrujbă + '\'' + ", firma='" + firma + '\'' + '}';
+    }
 }

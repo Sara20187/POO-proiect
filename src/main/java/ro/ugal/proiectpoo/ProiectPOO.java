@@ -35,7 +35,8 @@ public class ProiectPOO {
         System.out.println("Aparat de curatat geamuri: "+aparatCuratatGeamuri);
         System.out.println("Copie aparat de curatat geamuri: "+copieAparatCuratatGeamuri);
         
-    
+        //instante din clasa Drujba
+        //Drujbă drujba1 = new Drujbă("Benzina", "Automat", 6, "Taiere", "Pardoseala", 40, "Benzina",);
     
     }    
 }
