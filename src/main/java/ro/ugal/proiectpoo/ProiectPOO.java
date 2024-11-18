@@ -50,7 +50,27 @@ public class ProiectPOO {
 
         System.out.println("Masina tuns: " + masinaTuns);
         System.out.println("Masina tuns iarba: " + masinaTunsIarba);
-        System.out.println("Copie masina tuns iarba: " + copieMasinaTunsIarba);        
+        System.out.println("Copie masina tuns iarba: " + copieMasinaTunsIarba);
+        
+        AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",15,"clatire","masini");
+        AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","cablu","manual",20,"curatare","pereti exteriori");
+        AparatSpalareCuPresiune bosch=new AparatSpalareCuPresiune(200,"motorina","usor redus","energie solara","manual",30,"curatare intensa","pavaje");
+        AparatSpalareCuPresiune copieAparatSpalarePresiune=new AparatSpalareCuPresiune(honda);
+        
+        System.out.println("Aparat de spalare cu presiune de uz casnic: "+ lavor);
+        System.out.println("Aparat de spalare cu presiune semi-profesionale: "+ honda);
+        System.out.println("Aparat de spalare cu presiune profesionale: "+bosch);
+        System.out.println("Copie aparat spalare cu presiune: "+copieAparatSpalarePresiune);
+         
+        Suflanta electrice=new Suflanta(100,24,"Bosch","electrica","manuala",13,"indepartarea mizeriilor","interior garaj"); 
+        Suflanta peAcumulator=new Suflanta(120,48,"Greenworks","acumulator","manuala",15,"aspirare","terase si gradini");
+        Suflanta peBenzina=new Suflanta(160,72,"Echo","benzina","manuala",20,"indepartarea mizeriilor","aleii si curti"); 
+        Suflanta copieSuflanta=new Suflanta(peBenzina);
+        
+        System.out.println("Suflante electriea: "+ electrice);
+        System.out.println("Suflante cu acumulator: "+ peAcumulator);
+        System.out.println("Suflante pe benzina: "+peBenzina);
+        System.out.println("Copie suflanta: "+copieSuflanta);        
         
     }    
 }
