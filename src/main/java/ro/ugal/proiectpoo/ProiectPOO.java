@@ -69,8 +69,22 @@ public class ProiectPOO {
         System.out.println("Suflante electriea: "+ electrice);
         System.out.println("Suflante cu acumulator: "+ peAcumulator);
         System.out.println("Suflante pe benzina: "+peBenzina);
-        System.out.println("Copie suflanta: "+copieSuflanta);     
+        System.out.println("Copie suflanta: "+copieSuflanta);   
         
+        AspiratorUmed aspiratorUmed1 = new AspiratorUmed();
+        AspiratorUmed aspiratorUmed2 = new AspiratorUmed(14, "detergent", 45, "jet continuu", "turcoaz", "baterii", "manual", 3, "curatare", "geam");
+        AspiratorUmed aspiratorUmed3 = new AspiratorUmed(aspiratorUmed2);
+        System.out.println("aspiratorUmed1: " + aspiratorUmed1.toString());
+        System.out.println("aspiratorUmed2: " + aspiratorUmed2.toString());
+        System.out.println("aspiratorUmed3: " + aspiratorUmed3.toString());
+    
+        AspiratorUscat aspiratorUscat1 = new AspiratorUscat();
+        AspiratorUscat aspiratorUscat2 = new AspiratorUscat(2, 5, 9, "mov", "hartie", "cablu", "automat", 6, "curatare", "pardoseala");
+        AspiratorUscat aspiratorUscat3 = new AspiratorUscat(aspiratorUscat2);
+        System.out.println("aspiratorUscat1: " + aspiratorUscat1.toString());
+        System.out.println("aspiratorUscat2: " + aspiratorUscat2.toString());
+        System.out.println("aspiratorUscat3: " + aspiratorUscat3.toString());
+
         // instanțe din clasa Drujbă
         Drujbă drujba1 = new Drujbă("Benzină", "Automat", 6, "Tăiere", "Pardoseală", 40, "Benzină", "Stihl");
         Drujbă drujba2 = new Drujbă("Cablu", "Semi-Automat", 7, "Tăiere", "Pardoseală", 35, "Electric", "Husqvarna");
