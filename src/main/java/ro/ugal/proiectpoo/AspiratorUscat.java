@@ -14,7 +14,7 @@ public class AspiratorUscat extends Aparat {
     int lungimeFurtun; //in metri
     String culoare;
     String tipSac;
-
+    
     //constructor fara argumente
     public AspiratorUscat(){
         super();
@@ -24,7 +24,7 @@ public class AspiratorUscat extends Aparat {
         this.culoare = "Verde";
         this.lungimeFurtun = 4;
     }
-
+    
     //constructor cu toate argumentele
 
     public AspiratorUscat(int numarRoti, int lungimeCablu, int lungimeFurtun, String culoare, String tipSac, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
@@ -35,8 +35,8 @@ public class AspiratorUscat extends Aparat {
         this.culoare = culoare;
         this.tipSac = tipSac;
     }
-
-
+    
+    
     //constructor de copiere
     public AspiratorUscat(AspiratorUscat other) {
         super(other);
@@ -46,12 +46,12 @@ public class AspiratorUscat extends Aparat {
         this.culoare = other.culoare;
         this.tipSac = other.tipSac;
     }
-
+    
     //metoda toString:
     @Override
     public String toString() {
         return "numarRoti=" + numarRoti + ", lungimeCablu=" + lungimeCablu + ", lungimeFurtun=" + lungimeFurtun + ", culoare=" + culoare + ", tipSac=" + tipSac;
     }
-
-
+    
+    
 }
