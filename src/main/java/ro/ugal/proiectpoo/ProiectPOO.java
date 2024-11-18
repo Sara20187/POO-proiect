@@ -69,6 +69,22 @@ public class ProiectPOO {
         System.out.println("Suflante electriea: "+ electrice);
         System.out.println("Suflante cu acumulator: "+ peAcumulator);
         System.out.println("Suflante pe benzina: "+peBenzina);
-        System.out.println("Copie suflanta: "+copieSuflanta);        
+        System.out.println("Copie suflanta: "+copieSuflanta);     
+        
+        // instanțe din clasa Drujbă
+        Drujbă drujba1 = new Drujbă("Benzină", "Automat", 6, "Tăiere", "Pardoseală", 40, "Benzină", "Stihl");
+        Drujbă drujba2 = new Drujbă("Cablu", "Semi-Automat", 7, "Tăiere", "Pardoseală", 35, "Electric", "Husqvarna");
+        
+        System.out.println("\nInstanțe Drujbă:");
+        System.out.println(drujba1);
+        System.out.println(drujba2);
+        
+        // instanțe din clasa Trimmer
+        Trimmer trimmer1 = new Trimmer("Baterii", "Automat", 1, "Tuns iarba", "Iarbă", true, 60, "Philips");
+        Trimmer trimmer2 = new Trimmer("Cablu", "Manual", 2, "Tuns iarba", "Iarbă", false, 0, "Black & Decker");
+        
+        System.out.println("\nInstanțe Trimmer:");
+        System.out.println(trimmer1);
+        System.out.println(trimmer2);
     }    
 }
