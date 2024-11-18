@@ -35,7 +35,6 @@ public class ProiectPOO {
         System.out.println("Aparat de curatat geamuri: "+aparatCuratatGeamuri);
         System.out.println("Copie aparat de curatat geamuri: "+copieAparatCuratatGeamuri);
         
-        
         Motosapa motosapaBenzina = new Motosapa();
         Motosapa motosapaElectrica = new Motosapa("Ruris", "electric", 20, "baterii", "automat", 20, "sapa", "pamant");
         Motosapa copieMotosapaElectrica = new Motosapa(motosapaElectrica);
@@ -85,6 +84,21 @@ public class ProiectPOO {
         System.out.println("aspiratorUscat1: " + aspiratorUscat1.toString());
         System.out.println("aspiratorUscat2: " + aspiratorUscat2.toString());
         System.out.println("aspiratorUscat3: " + aspiratorUscat3.toString());
+
+        // instanțe din clasa Drujbă
+        Drujbă drujba1 = new Drujbă("Benzină", "Automat", 6, "Tăiere", "Pardoseală", 40, "Benzină", "Stihl");
+        Drujbă drujba2 = new Drujbă("Cablu", "Semi-Automat", 7, "Tăiere", "Pardoseală", 35, "Electric", "Husqvarna");
         
+        System.out.println("\nInstanțe Drujbă:");
+        System.out.println(drujba1);
+        System.out.println(drujba2);
+        
+        // instanțe din clasa Trimmer
+        Trimmer trimmer1 = new Trimmer("Baterii", "Automat", 1, "Tuns iarba", "Iarbă", true, 60, "Philips");
+        Trimmer trimmer2 = new Trimmer("Cablu", "Manual", 2, "Tuns iarba", "Iarbă", false, 0, "Black & Decker");
+        
+        System.out.println("\nInstanțe Trimmer:");
+        System.out.println(trimmer1);
+        System.out.println(trimmer2);
     }    
 }
