@@ -44,5 +44,5 @@ public class Aparat {
     public String toString() {
         return  "mod de alimentare=" + modAlimentare + ", tip de actionare=" + tipActionare + ", greutate=" + greutate + ", mod de utilizare=" + modUtilizare + ", tip de suprafata=" + tipSuprafata;
     }
-
+    
 }
