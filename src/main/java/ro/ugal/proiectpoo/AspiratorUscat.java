@@ -27,7 +27,7 @@ public class AspiratorUscat extends Aparat {
     
     //constructor cu toate argumentele
 
-    public AspiratorUscat(int numarRoti, int lungimeCablu, int lungimeFurtun, String culoare, String tipSac, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public AspiratorUscat(int numarRoti, int lungimeCablu, int lungimeFurtun, String culoare, String tipSac, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.numarRoti = numarRoti;
         this.lungimeCablu = lungimeCablu;

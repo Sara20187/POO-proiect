@@ -26,7 +26,7 @@ public class Trimmer extends Aparat {
     }
 
     // constructor cu toate argumentele
-    public Trimmer(String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata, boolean esteElectric, int autonomie, String firma) {
+    public Trimmer(String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata, boolean esteElectric, int autonomie, String firma) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.esteElectric = esteElectric;
         this.autonomie = autonomie;

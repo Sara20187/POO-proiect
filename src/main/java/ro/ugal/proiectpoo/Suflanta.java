@@ -20,7 +20,7 @@ class Suflanta extends Aparat{
        durataFunctionare=0;
        firma="Necunoscut";
    }
-   public Suflanta(int vitezaAer,int durataFunctionare,String firma,String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata){
+   public Suflanta(int vitezaAer,int durataFunctionare,String firma,String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
        super(modAlimentare,tipActionare,greutate,modUtilizare,tipSuprafata);
        this.vitezaAer=vitezaAer;
        this.durataFunctionare=durataFunctionare;

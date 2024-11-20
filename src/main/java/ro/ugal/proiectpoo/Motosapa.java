@@ -20,7 +20,7 @@ public class Motosapa extends Aparat {
         adancimeLucru = 0;     
     }
     
-    public Motosapa(String firma, String tipMotor, int adancimeLucru, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata){
+    public Motosapa(String firma, String tipMotor, int adancimeLucru, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.firma = firma;
         this.tipMotor = tipMotor;

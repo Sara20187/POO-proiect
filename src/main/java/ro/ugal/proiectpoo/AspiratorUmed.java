@@ -25,7 +25,7 @@ public class AspiratorUmed extends Aparat {
     }
 
     //constructor cu toate argumentele
-    public AspiratorUmed(int capacitateRezervor, String tipLichid, int timpFunctionare, String tipSistemUmezire, String culoare, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public AspiratorUmed(int capacitateRezervor, String tipLichid, int timpFunctionare, String tipSistemUmezire, String culoare, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.capacitateRezervor = capacitateRezervor;
         this.tipLichid = tipLichid;

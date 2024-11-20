@@ -26,7 +26,7 @@ public class Drujbă extends Aparat {
     }
 
     // Constructor cu toate argumentele
-    public Drujbă(String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata, int lungimeLama, String tipDrujbă, String firma) {
+    public Drujbă(String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata, int lungimeLama, String tipDrujbă, String firma) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.lungimeLama = lungimeLama;
         this.tipDrujbă = tipDrujbă;

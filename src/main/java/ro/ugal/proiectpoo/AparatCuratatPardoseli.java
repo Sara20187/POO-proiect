@@ -27,7 +27,7 @@ public class AparatCuratatPardoseli extends Aparat {
     }
     //constructor cu parametrii
 
-    public AparatCuratatPardoseli(int putereMotor, int capacitateRezervor, int lungimeCablu, String functii, String firma, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public AparatCuratatPardoseli(int putereMotor, int capacitateRezervor, int lungimeCablu, String functii, String firma, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.putereMotor = putereMotor;
         this.capacitateRezervor = capacitateRezervor;

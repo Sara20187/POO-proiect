@@ -20,7 +20,7 @@ public class MasinaTunsIarba extends Aparat {
         capacitateRezervor = 0;
     }
     
-    public MasinaTunsIarba(String firma, int putere, int capacitateRezervor, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata){
+    public MasinaTunsIarba(String firma, int putere, int capacitateRezervor, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.firma = firma;
         this.putere = putere;

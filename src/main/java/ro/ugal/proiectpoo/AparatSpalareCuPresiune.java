@@ -19,7 +19,7 @@ class AparatSpalareCuPresiune extends Aparat{
        tipMotor="Necunoscut";
        nivelZgomot="Necunoscut";
    }
-   public AparatSpalareCuPresiune(int putereMaxima,String tipMotor,String nivelZgomot,  String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata){
+   public AparatSpalareCuPresiune(int putereMaxima,String tipMotor,String nivelZgomot,  String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
        super(modAlimentare,tipActionare,greutate,modUtilizare,tipSuprafata);
        this.putereMaxima=putereMaxima;
        this.tipMotor=tipMotor;

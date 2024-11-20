@@ -26,7 +26,7 @@ public class AparatCuratatGeamuri extends Aparat {
     }
     //constructor cu parametrii
 
-    public AparatCuratatGeamuri(String firma, String materialLama, int putere, int autonomie, int capacitateRezervor, String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public AparatCuratatGeamuri(String firma, String materialLama, int putere, int autonomie, int capacitateRezervor, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.firma = firma;
         this.materialLama = materialLama;

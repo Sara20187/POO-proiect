@@ -4,14 +4,16 @@
  */
 package ro.ugal.proiectpoo;
 
+ 
+
 /**
  *
  * @author mi358
  */
-public class Aparat {
+public class Aparat implements Control {
     String modAlimentare;//cablu sau baterii
     String tipActionare; //manual, semi-automat, automat
-    int greutate;//kg
+    byte greutate;//kg
     String modUtilizare;//curatare, tuns, spalare, taiere, etc..
     String tipSuprafata;// pentru ce tip de suprafata e potrivit:pardoseala, geamuri, iarba, suprafete dure, etc..
     
@@ -24,7 +26,7 @@ public class Aparat {
         tipSuprafata="Necunoscut";
     }
     //constructor cu parametrii
-    public Aparat(String modAlimentare, String tipActionare, int greutate, String modUtilizare, String tipSuprafata) {
+    public Aparat(String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         this.modAlimentare = modAlimentare;
         this.tipActionare = tipActionare;
         this.greutate = greutate;
@@ -43,6 +45,16 @@ public class Aparat {
     @Override
     public String toString() {
         return  "mod de alimentare=" + modAlimentare + ", tip de actionare=" + tipActionare + ", greutate=" + greutate + ", mod de utilizare=" + modUtilizare + ", tip de suprafata=" + tipSuprafata;
+    }
+
+    @Override
+    public void pornesteAparat() {
+    System.out.println("Apasa butonul de pornire");
+    }
+
+    @Override
+    public void opresteAparat() {
+     System.out.println("Apasa butonul de inchidere"); 
     }
     
 }
