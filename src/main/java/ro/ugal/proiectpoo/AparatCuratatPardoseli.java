@@ -9,11 +9,11 @@ package ro.ugal.proiectpoo;
  * @author mi358
  */
 public class AparatCuratatPardoseli extends Aparat {
-    int putereMotor;//in W
-    int capacitateRezervor; // ml
-    int lungimeCablu;//m
-    String functii;
-    String firma;
+    private int putereMotor;//in W
+    private int capacitateRezervor; // ml
+    private int lungimeCablu;//m
+    private String functii;
+    private String firma;
     
     //constructor implicit
 
@@ -43,8 +43,43 @@ public class AparatCuratatPardoseli extends Aparat {
         this.capacitateRezervor = other.capacitateRezervor;
         this.lungimeCablu = other.lungimeCablu;
         this.functii = other.functii;
-        this.firma=firma;
+        this.firma=other.firma;
     }
+
+    public void setPutereMotor(int putereMotor) {
+        this.putereMotor = putereMotor;
+    }
+    public int getPutereMotor() {
+        return putereMotor;
+    }
+    public void setCapacitateRezervor(int capacitateRezervor) {
+        this.capacitateRezervor = capacitateRezervor;
+    }
+    public int getCapacitateRezervor() {
+        return capacitateRezervor;
+    }
+
+    public void setLungimeCablu(int lungimeCablu) {
+        this.lungimeCablu = lungimeCablu;
+    }
+      public int getLungimeCablu() {
+        return lungimeCablu;
+    }
+
+    public void setFunctii(String functii) {
+        this.functii = functii;
+    } 
+    public String getFunctii() {
+        return functii;
+    }
+
+    public void setFirma(String firma) {
+        this.firma = firma;
+    }
+    public String getFirma() {
+        return firma;
+    }
+    
 
     @Override
     public String toString() {

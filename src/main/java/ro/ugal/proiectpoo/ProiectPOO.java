@@ -3,7 +3,7 @@
  */
 
 package ro.ugal.proiectpoo;
-
+import java.util.*;
 /**
  *
  * @author mi358
@@ -11,30 +11,105 @@ package ro.ugal.proiectpoo;
 public class ProiectPOO {
 
     public static void main(String[] args) {
-        Aparat aparat1=new Aparat();
-        Aparat aparat2=new Aparat("cablu","manual",(byte)2,"curatare","parchet");
-        Aparat aparat3=new Aparat(aparat2);
-        aparat1.pornesteAparat();
-        aparat1.opresteAparat();
+        Aparat aparatCuratatPardoseli=new Aparat();
+        Aparat aparatCuratatGeamuri=new Aparat("cablu","manual",(byte)2,"curatare","parchet");
+        Aparat aparatCuratatSticla=new Aparat(aparatCuratatGeamuri);
+        Aparat aparatTaiatLemne=new Aparat("cablu","manual",(byte)3,"taiere","lemn");
+        Aparat aparatTaiatIarba=new Aparat("baterie","semimanual",(byte)5,"taiere","iarba");
+        Aparat aparatDeSapat=new Aparat("baterie","semimanual",(byte)2,"sapat","pamant/sol");
+        Aparat aparatDeAspirat=new Aparat("cablu","manual",(byte)4,"curatare","podeaua");
+        Aparat aparatDeSuflat=new Aparat("baterie","manual",(byte)3,"curatare","solul de frunze");
+        Aparat trimmer=new Aparat("baterie","manual",(byte)3,"taiere","iarba");
+        Aparat aparatSpalareCuPresiune=new Aparat("cablu","manual",(byte)1,"curatare","orice suprafata");  
+       
         AparatCuratatPardoseli mop=new AparatCuratatPardoseli();
         AparatCuratatPardoseli mopCuAburi=new AparatCuratatPardoseli(1200,300,3,"Dezinfectare cu aburi","Vileda","cablu","manual",(byte)2,"curatare","parchet si gresie");
-        AparatCuratatPardoseli copieMopAburi=new AparatCuratatPardoseli(mopCuAburi);
-    
+        AparatCuratatPardoseli mopAburiCopie=new AparatCuratatPardoseli(mopCuAburi);
+        AparatCuratatPardoseli mopMyria=new AparatCuratatPardoseli(2000,500,5,"Dezinfectare si curatare","Myria","cablu","manual",(byte)2,"curatare","pardoseala");
+        AparatCuratatPardoseli mopGorenje=new AparatCuratatPardoseli(1500,600,6,"spalare si dezifectare","Gorenje","cablu","manual",(byte)2,"curatare","pardoseala");
+        AparatCuratatPardoseli masinaDeSpalatPardoseliLavor=new AparatCuratatPardoseli(4000,1000,14,"curatare si uscare","Lavor","cablu","manual",(byte)2,"curatare","pardoseala");
+        AparatCuratatPardoseli masinaDeSpalatPardoseliDart=new AparatCuratatPardoseli(4500,1000,12,"dezinfecatre, curatare si uscare","Dart","cablu","semimanual",(byte)6,"curatare","pardoseala" );
+        AparatCuratatPardoseli masinaDeSpalatPardoseliDureLavor=new AparatCuratatPardoseli(5000,1500,10," Curatare suprafete dure","Lavor","cablu","semimanual",(byte)5,"curatare","suprafete dure");
+        AparatCuratatPardoseli masinaDeSpalatPardoseliDureDart=new AparatCuratatPardoseli(5000,1500,10,"curatare suprafete dure","Dart","cablu","semimanual",(byte)7,"curatare","suprafete dure");
+        AparatCuratatPardoseli masinaHybrid=new AparatCuratatPardoseli(3000,900,10,"aspirare, curatare si uscare","Gorenje","cablu","semimanual",(byte)4,"curatare","pardoseala");
+        
         AparatCuratatGeamuri stergator=new AparatCuratatGeamuri();
-        AparatCuratatGeamuri aparatCuratatGeamuri=new AparatCuratatGeamuri("Bosch","cauciuc",100,1,200,"cablu","manual",(byte)1,"curatare","sticla");
-        AparatCuratatGeamuri copieAparatCuratatGeamuri=new AparatCuratatGeamuri(aparatCuratatGeamuri);
-        
-        System.out.println("Aparat1: "+aparat1);
-        System.out.println("Aparat2: "+aparat2);
-        System.out.println("Aparat3: "+aparat3);
-        
-        System.out.println("Mop: " +mop);
-        System.out.println("Mop cu aburi: "+mopCuAburi);
-        System.out.println("Copie a mopului cu aburi: "+copieMopAburi);
-        
-        System.out.println("Stergator: "+ stergator);
+        AparatCuratatGeamuri aspiratorGeamuri=new AparatCuratatGeamuri("Bosch","cauciuc",100,1,200,"cablu","manual",(byte)1,"curatare","sticla");
+        AparatCuratatGeamuri aparatGeamuri=new AparatCuratatGeamuri(aspiratorGeamuri);
+        AparatCuratatGeamuri aparatCuratatAburi=new AparatCuratatGeamuri("Karcher","cauciuc",100,1,200,"baterie","semimanual",(byte)2,"curatare","sticla");
+        AparatCuratatGeamuri curatatorElectric=new AparatCuratatGeamuri("Bosch","material textil",200,2,400,"baterie","semimanual",(byte)2,"curatare","sticla");
+        AparatCuratatGeamuri robotCuratareGeamuri=new AparatCuratatGeamuri("IHunt","material textil",300,3,200,"baterie","automat",(byte)2,"curatare","sticla");
+        AparatCuratatGeamuri stergatorFlippy=new AparatCuratatGeamuri("Flippy","cauciuc",200,1,200,"baterie","manual",(byte)1,"curatare","sticla");      
+        AparatCuratatGeamuri aparatGeamuriTaurus=new AparatCuratatGeamuri("Taurus","cauciuc",100,2,300,"baterie","manual",(byte)2,"curatare","sticla");       
+        AparatCuratatGeamuri stergatorKarcher=new AparatCuratatGeamuri("Karcher","cauciuc",100,1,200,"baterie","manual",(byte)1,"curatare","sticla");       
+        AparatCuratatGeamuri perieElectrica=new AparatCuratatGeamuri("Bosch","plastic sau textil",200,2,300,"baterie","semimanual",(byte)2,"curatare","sticla");
+                
+        aparatCuratatPardoseli.pornesteAparat();
+        aparatCuratatPardoseli.opresteAparat();
+        System.out.println("\nAparat de curatat pardoseli: "+aparatCuratatPardoseli);
         System.out.println("Aparat de curatat geamuri: "+aparatCuratatGeamuri);
-        System.out.println("Copie aparat de curatat geamuri: "+copieAparatCuratatGeamuri);
+        System.out.println("Aparat de curatat sticla: "+aparatCuratatSticla);
+        
+        System.out.println("\nMop: " +mop);
+        System.out.println("Mop cu aburi: "+mopCuAburi);
+        System.out.println("Copie a mopului cu aburi: "+mopAburiCopie);
+        
+        System.out.println("\nStergator: "+ stergator);
+        System.out.println("Aspirator de geamuri: "+aspiratorGeamuri);
+        System.out.println("Copie aspirator de geamuri: "+aparatGeamuri+"\n");
+        
+        //Vectori
+        ArrayList<Aparat> aparate=new ArrayList();
+        aparate.add(aparatCuratatPardoseli);
+        aparate.add(aparatCuratatGeamuri);
+        aparate.add(aparatCuratatSticla);
+        aparate.add(aparatTaiatLemne);
+        aparate.add(aparatTaiatIarba);
+        aparate.add(aparatDeSapat);
+        aparate.add(aparatDeAspirat);
+        aparate.add(aparatDeSuflat);
+        aparate.add(trimmer);
+        aparate.add(aparatSpalareCuPresiune);
+        
+        for(Aparat apm:aparate)//{
+            //if(apm.greutate >2 && apm.modAlimentare.equals("cablu")){
+                System.out.println("Aparate: " +apm);//}}
+        System.out.println("\n");
+        
+        ArrayList<AparatCuratatPardoseli> aparateCuratatPardoseli=new ArrayList();
+        aparateCuratatPardoseli.add(mop);
+        aparateCuratatPardoseli.add(mopCuAburi);
+        aparateCuratatPardoseli.add(mopAburiCopie);
+        aparateCuratatPardoseli.add(mopMyria);
+        aparateCuratatPardoseli.add(mopGorenje); 
+        aparateCuratatPardoseli.add(masinaDeSpalatPardoseliLavor);
+        aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDart); 
+        aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureLavor); 
+        aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureDart); 
+        aparateCuratatPardoseli.add(masinaHybrid);
+          for(Aparat acp:aparate)//{
+              //if(acp.lungimeCablu > 9 && acp.firma.equals("Karcher") ){
+            System.out.println("Aparate de curatat pardoseli: " +acp);//}}
+          System.out.println("\n");
+          
+        ArrayList<AparatCuratatGeamuri> aparateCuratatGeamuri=new ArrayList();
+        aparateCuratatGeamuri.add(stergator);
+        aparateCuratatGeamuri.add(aspiratorGeamuri);
+        aparateCuratatGeamuri.add(aparatGeamuri);
+        aparateCuratatGeamuri.add(aparatCuratatAburi);
+        aparateCuratatGeamuri.add(curatatorElectric);
+        aparateCuratatGeamuri.add(robotCuratareGeamuri);
+        aparateCuratatGeamuri.add(stergatorFlippy);
+        aparateCuratatGeamuri.add(aparatGeamuriTaurus);
+        aparateCuratatGeamuri.add(stergatorKarcher);
+        aparateCuratatGeamuri.add(perieElectrica);
+        
+         for(Aparat acg:aparate)//{
+             //if(acg.materialLamaPerie.equals("cauciuc") && acg.autonomie > 1 ){
+            System.out.println("Aparate de curatat geamuri: " +acg);//}}
+         System.out.println("\n");
+        
+        
         
         Motosapa motosapaBenzina = new Motosapa();
         Motosapa motosapaElectrica = new Motosapa("Ruris", "electric", 20, "baterii", "automat",(byte) 20, "sapa", "pamant");
