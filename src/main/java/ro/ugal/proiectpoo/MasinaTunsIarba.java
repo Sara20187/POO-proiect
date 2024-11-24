@@ -41,6 +41,28 @@ public class MasinaTunsIarba extends Aparat {
         this.putere = other.putere;
         this.capacitateRezervor = other.capacitateRezervor;
     }
+
+    public String getFirma() {
+        return firma;
+    }
+
+    public String getCuloare() {
+        return culoare;
+    }
+
+    public String getMaterialLama() {
+        return materialLama;
+    }
+
+    public short getPutere() {
+        return putere;
+    }
+
+    public byte getCapacitateRezervor() {
+        return capacitateRezervor;
+    }
+    
+    
     
     @Override
     public String toString(){

@@ -41,15 +41,19 @@ public class ProiectPOO {
         Motosapa copieMotosapaElectrica = new Motosapa(motosapaElectrica);
         
         MasinaTunsIarba masinaTunsIarba1 = new MasinaTunsIarba();
-        MasinaTunsIarba masinaTunsIarba2 = new MasinaTunsIarba("DeWalt", "galben", "otel",(short)1000, (byte)2, "manual", "cablu", (byte)15, "tuns", "iarba");
-        MasinaTunsIarba copieMasinaTunsIarba2 = new MasinaTunsIarba(masinaTunsIarba2);
+        MasinaTunsIarba masinaElectrica = new MasinaTunsIarba("DeWalt", "galben", "metal",(short)1300, (byte)5, "cablu", "manual", (byte)12, "taiere", "iarba");
+        MasinaTunsIarba masinaElectricaBosch = new MasinaTunsIarba("Bosch", "galben", "metal", (short)1000, (byte)6, "cablu", "manual", (byte)10, "taiere", "iarba");
+        MasinaTunsIarba masinaElectricaMakita = new MasinaTunsIarba("Makita", "verde", "metal sudat", (short)1600, (byte)10, "cablu", "manual", (byte)10, "taiere", "iarba");
+        MasinaTunsIarba masinaPeBenzina1 = new MasinaTunsIarba("Ruris", "rosu", "metal", (short)1600, (byte)8, "cablu", "auto", (byte)15, "curatare", "iarba");
+        MasinaTunsIarba masinaPeBenzina2 = new MasinaTunsIarba("Husqvarna", "verde", "metal sudat", (short)1500, (byte)7, "benzina", "auto", (byte)25, "taiere", "iarba");
+        MasinaTunsIarba copieMasinaTunsIarba2 = new MasinaTunsIarba(masinaElectrica);
         
         System.out.println("Motosapa pe benzina: " + motosapaBenzina);
         System.out.println("Motosapa electrica: " + motosapaElectrica);
         System.out.println("Copie motosapa electrica: " + copieMotosapaElectrica);
 
         System.out.println("Masina tuns iarba 1: " + masinaTunsIarba1);
-        System.out.println("Masina tuns iarba 2: " + masinaTunsIarba2);
+        System.out.println("Masina electrica: " + masinaElectrica);
         System.out.println("Copie masina tuns iarba 2: " + copieMasinaTunsIarba2);
         
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",(byte)15,"clatire","masini");
