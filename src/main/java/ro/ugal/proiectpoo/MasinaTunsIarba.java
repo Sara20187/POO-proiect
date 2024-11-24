@@ -14,6 +14,7 @@ public class MasinaTunsIarba extends Aparat {
     String materialLama;
     short putere;
     byte capacitateRezervor;
+    String nume;
     
     public MasinaTunsIarba(){
         super();
