@@ -40,17 +40,17 @@ public class ProiectPOO {
         Motosapa motosapaElectrica = new Motosapa("Ruris", "electric", 20, "baterii", "automat",(byte) 20, "sapa", "pamant");
         Motosapa copieMotosapaElectrica = new Motosapa(motosapaElectrica);
         
-        MasinaTunsIarba masinaTuns = new MasinaTunsIarba();
-        MasinaTunsIarba masinaTunsIarba = new MasinaTunsIarba("DeWalt", 1500, 2, "automat", "baterii", (byte)20, "tuns", "iarba");
-        MasinaTunsIarba copieMasinaTunsIarba = new MasinaTunsIarba(masinaTunsIarba);
+        MasinaTunsIarba masinaTunsIarba1 = new MasinaTunsIarba();
+        MasinaTunsIarba masinaTunsIarba2 = new MasinaTunsIarba("DeWalt", "galben", "otel",(short)1000, (byte)2, "manual", "cablu", (byte)15, "tuns", "iarba");
+        MasinaTunsIarba copieMasinaTunsIarba2 = new MasinaTunsIarba(masinaTunsIarba2);
         
         System.out.println("Motosapa pe benzina: " + motosapaBenzina);
         System.out.println("Motosapa electrica: " + motosapaElectrica);
         System.out.println("Copie motosapa electrica: " + copieMotosapaElectrica);
 
-        System.out.println("Masina tuns: " + masinaTuns);
-        System.out.println("Masina tuns iarba: " + masinaTunsIarba);
-        System.out.println("Copie masina tuns iarba: " + copieMasinaTunsIarba);
+        System.out.println("Masina tuns iarba 1: " + masinaTunsIarba1);
+        System.out.println("Masina tuns iarba 2: " + masinaTunsIarba2);
+        System.out.println("Copie masina tuns iarba 2: " + copieMasinaTunsIarba2);
         
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","cablu","manual",(byte)20,"curatare","pereti exteriori");
