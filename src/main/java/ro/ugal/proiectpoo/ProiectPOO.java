@@ -126,6 +126,24 @@ public class ProiectPOO {
         System.out.println("Masina de tuns iarba: " + masinaTuns);
         
         
+        ArrayList<MasinaTunsIarba> masiniTuns = new ArrayList();
+        masiniTuns.add(masinaDeTuns);
+        masiniTuns.add(masinaElectrica);
+        masiniTuns.add(masinaElectricaBosch);
+        masiniTuns.add(masinaElectricaMakita);
+        masiniTuns.add(masinaPeBenzina);
+        masiniTuns.add(masinaPeBenzinaHusqvarna);
+        masiniTuns.add(masinaPeBaterii);
+        masiniTuns.add(masinaPeBateriiBosch);
+        masiniTuns.add(masinaPeBateriiRuris);
+        masiniTuns.add(masinaTuns);
+        
+        System.out.println("\n");
+
+        for(Aparat masina:masiniTuns)
+            System.out.println("Vector masini tuns iarba: " + masina);
+        System.out.println("\n");
+  
         Motosapa motosapaPeBenzina = new Motosapa();
         Motosapa motosapaElectrica = new Motosapa("Ruris", "benzina", "metal", "negru", (short)20, "baterii", "automat",(byte) 20, "sapa", "pamant");
         Motosapa motosapaHonda = new Motosapa("Honda", "benzina", "metal", "rosu", (short)20, "electric", "manual", (byte)17, "cultivare", "pamant");
@@ -140,6 +158,25 @@ public class ProiectPOO {
         System.out.println("\nMotosapa: " + motosapaPeBenzina);
         System.out.println("Motosapa: " + motosapaElectrica);
         System.out.println("Motosapa: " + motosapaBenzina);
+        
+        System.out.println("\n");
+        
+        
+        ArrayList<Motosapa> motosape = new ArrayList();
+        motosape.add(motosapaPeBenzina);
+        motosape.add(motosapaElectrica);
+        motosape.add(motosapaHonda);
+        motosape.add(motosapaHusqvarna);
+        motosape.add(motosapaRuris);
+        motosape.add(motosapaTexas);
+        motosape.add(motosapaProGarden);
+        motosape.add(motosapaGardenia);
+        motosape.add(motosapaDeWalt);
+        motosape.add(motosapaBenzina);
+        
+        for(Aparat moto:motosape)
+            System.out.println("Vector motosape: " + moto);
+        System.out.println("\n");
         
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","cablu","manual",(byte)20,"curatare","pereti exteriori");
