@@ -9,11 +9,11 @@ package ro.ugal.proiectpoo;
  * @author gm396
  */
 public class MasinaTunsIarba extends Aparat {
-    String firma;
-    String culoare;
-    String materialLama;
-    short putere;
-    byte capacitateRezervor;
+    private String firma;
+    private String culoare;
+    private String materialLama;
+    private short putere;
+    private byte capacitateRezervor;
     
     public MasinaTunsIarba(){
         super();
@@ -61,7 +61,26 @@ public class MasinaTunsIarba extends Aparat {
     public byte getCapacitateRezervor() {
         return capacitateRezervor;
     }
-    
+
+    public void setFirma(String firma) {
+        this.firma = firma;
+    }
+
+    public void setCuloare(String culoare) {
+        this.culoare = culoare;
+    }
+
+    public void setMaterialLama(String materialLama) {
+        this.materialLama = materialLama;
+    }
+
+    public void setPutere(short putere) {
+        this.putere = putere;
+    }
+
+    public void setCapacitateRezervor(byte capacitateRezervor) {
+        this.capacitateRezervor = capacitateRezervor;
+    }
     
     
     @Override

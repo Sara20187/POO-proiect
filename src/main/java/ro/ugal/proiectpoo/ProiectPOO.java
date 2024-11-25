@@ -109,27 +109,37 @@ public class ProiectPOO {
             System.out.println("Aparate de curatat geamuri: " +acg);//}}
          System.out.println("\n");
         
-        
-        
-        Motosapa motosapaBenzina = new Motosapa();
-        Motosapa motosapaElectrica = new Motosapa("Ruris", "electric", 20, "baterii", "automat",(byte) 20, "sapa", "pamant");
-        Motosapa copieMotosapaElectrica = new Motosapa(motosapaElectrica);
-        
-        MasinaTunsIarba masinaTunsIarba1 = new MasinaTunsIarba();
+              
+        MasinaTunsIarba masinaDeTuns = new MasinaTunsIarba();
         MasinaTunsIarba masinaElectrica = new MasinaTunsIarba("DeWalt", "galben", "metal",(short)1300, (byte)5, "cablu", "manual", (byte)12, "taiere", "iarba");
         MasinaTunsIarba masinaElectricaBosch = new MasinaTunsIarba("Bosch", "galben", "metal", (short)1000, (byte)6, "cablu", "manual", (byte)10, "taiere", "iarba");
         MasinaTunsIarba masinaElectricaMakita = new MasinaTunsIarba("Makita", "verde", "metal sudat", (short)1600, (byte)10, "cablu", "manual", (byte)10, "taiere", "iarba");
-        MasinaTunsIarba masinaPeBenzina1 = new MasinaTunsIarba("Ruris", "rosu", "metal", (short)1600, (byte)8, "cablu", "auto", (byte)15, "curatare", "iarba");
-        MasinaTunsIarba masinaPeBenzina2 = new MasinaTunsIarba("Husqvarna", "verde", "metal sudat", (short)1500, (byte)7, "benzina", "auto", (byte)25, "taiere", "iarba");
-        MasinaTunsIarba copieMasinaTunsIarba2 = new MasinaTunsIarba(masinaElectrica);
+        MasinaTunsIarba masinaPeBenzina = new MasinaTunsIarba("Ruris", "rosu", "metal", (short)1600, (byte)8, "cablu", "auto", (byte)15, "curatare", "iarba");
+        MasinaTunsIarba masinaPeBenzinaHusqvarna = new MasinaTunsIarba("Husqvarna", "verde", "metal sudat", (short)1500, (byte)7, "benzina", "auto", (byte)25, "taiere", "iarba");
+        MasinaTunsIarba masinaPeBaterii = new MasinaTunsIarba("Heinner","galben", "plastic", (short)1700, (byte)10, "benzina", "auto", (byte)30, "taiere", "iarba");
+        MasinaTunsIarba masinaPeBateriiBosch = new MasinaTunsIarba("Bosch", "verde", "metal", (short)1500, (byte)8, "baterii", "manual", (byte)9, "taiere", "iarba");
+        MasinaTunsIarba masinaPeBateriiRuris = new MasinaTunsIarba("Ruris", "galben", "metal", (short)1000, (byte)18, "baterii", "manual", (byte)8, "taiere", "iarba");
+        MasinaTunsIarba masinaTuns = new MasinaTunsIarba(masinaElectrica);
         
-        System.out.println("Motosapa pe benzina: " + motosapaBenzina);
-        System.out.println("Motosapa electrica: " + motosapaElectrica);
-        System.out.println("Copie motosapa electrica: " + copieMotosapaElectrica);
-
-        System.out.println("Masina tuns iarba 1: " + masinaTunsIarba1);
-        System.out.println("Masina electrica: " + masinaElectrica);
-        System.out.println("Copie masina tuns iarba 2: " + copieMasinaTunsIarba2);
+        System.out.println("Masina de tuns iarba: " + masinaDeTuns);
+        System.out.println("Masina de tuns iarba: " + masinaElectrica);
+        System.out.println("Masina de tuns iarba: " + masinaTuns);
+        
+        
+        Motosapa motosapaPeBenzina = new Motosapa();
+        Motosapa motosapaElectrica = new Motosapa("Ruris", "benzina", "metal", "negru", (short)20, "baterii", "automat",(byte) 20, "sapa", "pamant");
+        Motosapa motosapaHonda = new Motosapa("Honda", "benzina", "metal", "rosu", (short)20, "electric", "manual", (byte)17, "cultivare", "pamant");
+        Motosapa motosapaHusqvarna = new Motosapa("Husqvarna", "benzina", "metal", "portocaliu", (short)30, "electric", "semi-auto", (byte)66, "cultivare", "pamant");
+        Motosapa motosapaRuris = new Motosapa("Ruris", "benzina", "metal", "gri", (short)20, "electric", "semi-auto", (byte)54, "cultivare", "pamant");
+        Motosapa motosapaTexas = new Motosapa("Texas", "benzina", "metal", "negru", (short)15, "electric", "auto", (byte)40, "cultivare", "pamant");
+        Motosapa motosapaProGarden = new Motosapa("ProGarden", "benzina", "metal", "portocaliu", (short)18, "electric", "semi-auto", (byte)55, "cultivare", "pamant");
+        Motosapa motosapaGardenia = new Motosapa("Gardenia", "benzina", "metal", "verde", (short)30, "electric", "auto", (byte)60, "cultivare", "pamant");
+        Motosapa motosapaDeWalt = new Motosapa("DeWalt", "benzina", "metal", "galben", (short)30, "electric", "auto", (byte)38, "cultivare", "pamant");
+        Motosapa motosapaBenzina = new Motosapa(motosapaElectrica);
+        
+        System.out.println("\nMotosapa: " + motosapaPeBenzina);
+        System.out.println("Motosapa: " + motosapaElectrica);
+        System.out.println("Motosapa: " + motosapaBenzina);
         
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","cablu","manual",(byte)20,"curatare","pereti exteriori");
