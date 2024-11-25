@@ -127,25 +127,75 @@ public class ProiectPOO {
         System.out.println("Masina tuns iarba 2: " + masinaTunsIarba2);
         System.out.println("Copie masina tuns iarba 2: " + copieMasinaTunsIarba2);
         
-        AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","manual",(byte)15,"clatire","masini");
-        AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","cablu","manual",(byte)20,"curatare","pereti exteriori");
-        AparatSpalareCuPresiune bosch=new AparatSpalareCuPresiune(200,"motorina","usor redus","energie solara","manual",(byte)30,"curatare intensa","pavaje");
+        AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","rosu","Lavor","manual",(byte)15,"clatire","masini");
+        AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","albastru","Honda","cablu","manual",(byte)20,"curatare","pereti exteriori");
+        AparatSpalareCuPresiune bosch=new AparatSpalareCuPresiune(200,"motorina","usor redus","verde","Bosch","energie solara","manual",(byte)30,"curatare intensa","pavaje");
+        AparatSpalareCuPresiune boss=new AparatSpalareCuPresiune(250,"energie electrica","redus","roz","Boss","cablu","manual",(byte)27,"curatare","suprafete exterioare");
+        AparatSpalareCuPresiune philips=new AparatSpalareCuPresiune(180,"benzina","mare","galben","Philips","baterii","manual",(byte)14,"clatire","motociclete");
+        AparatSpalareCuPresiune beko=new AparatSpalareCuPresiune(140,"motorina","redus","portocaliu","Beko","energie solara","manual",(byte)15,"clatire usoara","pereti");
+        AparatSpalareCuPresiune sony=new AparatSpalareCuPresiune(210,"electric","puternic","negru","Sony","baterii","manual",(byte)35,"curatare intensa","pavaje");
+        AparatSpalareCuPresiune dyson=new AparatSpalareCuPresiune(175,"motorina","redus","alb","Dyson","energie solara","manual",(byte)20,"curatare usoara","pereti exteriori");
+        AparatSpalareCuPresiune lg=new AparatSpalareCuPresiune(150,"energie electrica","usor redus","mov","LG","cablu","manual",(byte)30,"clatire","suprafete exterioare");
+        AparatSpalareCuPresiune samsung=new AparatSpalareCuPresiune(265,"motorina","usor redus","maro","Samsung","cablu","manual",(byte)32,"curatare intensa","pavaje");
         AparatSpalareCuPresiune copieAparatSpalarePresiune=new AparatSpalareCuPresiune(honda);
         
-        System.out.println("Aparat de spalare cu presiune de uz casnic: "+ lavor);
+        System.out.println("\nAparat de spalare cu presiune de uz casnic: "+ lavor);
         System.out.println("Aparat de spalare cu presiune semi-profesionale: "+ honda);
         System.out.println("Aparat de spalare cu presiune profesionale: "+bosch);
         System.out.println("Copie aparat spalare cu presiune: "+copieAparatSpalarePresiune);
+        
+        System.out.println("\n");
+        
+        ArrayList<AparatSpalareCuPresiune> aparateSpalarePresiune=new ArrayList();
+        aparateSpalarePresiune.add(lg);
+        aparateSpalarePresiune.add(samsung);
+        aparateSpalarePresiune.add(dyson);
+        aparateSpalarePresiune.add(sony);
+        aparateSpalarePresiune.add(lavor);
+        aparateSpalarePresiune.add(honda);
+        aparateSpalarePresiune.add(bosch);
+        aparateSpalarePresiune.add(boss);
+        aparateSpalarePresiune.add(philips);
+        aparateSpalarePresiune.add(beko);
+        
+        for(Aparat apar:aparateSpalarePresiune)
+            System.out.println("Vector ASP: " +apar);
+         System.out.println("\n");
          
-        Suflanta electrice=new Suflanta(100,24,"Bosch","electrica","manuala",(byte)13,"indepartarea mizeriilor","interior garaj"); 
-        Suflanta peAcumulator=new Suflanta(120,48,"Greenworks","acumulator","manuala",(byte)15,"aspirare","terase si gradini");
-        Suflanta peBenzina=new Suflanta(160,72,"Echo","benzina","manuala",(byte)20,"indepartarea mizeriilor","aleii si curti"); 
+        Suflanta electrice=new Suflanta(100,24,"Bosch","alb",452,"electrica","manuala",(byte)13,"indepartarea mizeriilor","interior garaj"); 
+        Suflanta peAcumulator=new Suflanta(120,48,"Greenworks","negru",620,"acumulator","manuala",(byte)15,"aspirare","terase si gradini");
+        Suflanta peBenzina=new Suflanta(160,72,"Echo","galben",220,"benzina","manuala",(byte)20,"indepartarea mizeriilor","aleii si curti"); 
+        Suflanta lenovo=new Suflanta(130,45,"Lenovo","mov",255,"motorina","manuala",(byte)10,"indepartarea mizeriilor mici","interior");
+        Suflanta panasonic=new Suflanta(160,52,"Panasonic","roz",356,"benzina","manuala",(byte)25,"aspirare","terase");
+        Suflanta nvidia=new Suflanta(120,44,"NVidia","portocaliu",198,"benzina","manuala",(byte)20,"indepartarea mizeriilor","aleii si curti"); 
+        Suflanta yazaki=new Suflanta(158,47,"Yazaki","rosu",145,"motorina","manuala",(byte)18,"aspirare","gradini");
+        Suflanta hiunda=new Suflanta(110,56,"Hiunda","albastru",564,"benzina","manuala",(byte)25,"indepartarea mizeriilor","curti"); 
+        Suflanta kawasaki=new Suflanta(170,82,"Kawasaki","verde",349,"motorina","manuala",(byte)26,"aspirare","interior garaj");
+        Suflanta sakura=new Suflanta(145,68,"Sakura","maro",260,"benzina","manuala",(byte)23,"indepartarea frunzisiului","aleii"); 
         Suflanta copieSuflanta=new Suflanta(peBenzina);
         
-        System.out.println("Suflante electriea: "+ electrice);
+        System.out.println("\nSuflante electriea: "+ electrice);
         System.out.println("Suflante cu acumulator: "+ peAcumulator);
         System.out.println("Suflante pe benzina: "+peBenzina);
         System.out.println("Copie suflanta: "+copieSuflanta);   
+        
+        System.out.println("\n");
+        
+        ArrayList<Suflanta> suflante=new ArrayList();
+        suflante.add(electrice);
+        suflante.add(peAcumulator);
+        suflante.add(peBenzina);
+        suflante.add(lenovo);
+        suflante.add(panasonic);
+        suflante.add(nvidia);
+        suflante.add(yazaki);
+        suflante.add(hiunda);
+        suflante.add(kawasaki);
+        suflante.add(sakura);
+        
+        for(Aparat suf:suflante)
+            System.out.println("Vector suflante: " +suf);
+         System.out.println("\n");
         
         AspiratorUmed aspiratorUmed1 = new AspiratorUmed();
         AspiratorUmed aspiratorUmed2 = new AspiratorUmed(14, "detergent", 45, "jet continuu", "turcoaz", "baterii", "manual", (byte)3, "curatare", "geam");
