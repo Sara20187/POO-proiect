@@ -45,37 +45,37 @@ public class MasinaTunsIarba extends Aparat {
     public String getFirma() {
         return firma;
     }
+    
+    public void setFirma(String firma) {
+        this.firma = firma;
+    }
 
     public String getCuloare() {
         return culoare;
+    }
+    
+    public void setCuloare(String culoare) {
+        this.culoare = culoare;
     }
 
     public String getMaterialLama() {
         return materialLama;
     }
-
-    public short getPutere() {
-        return putere;
-    }
-
-    public byte getCapacitateRezervor() {
-        return capacitateRezervor;
-    }
-
-    public void setFirma(String firma) {
-        this.firma = firma;
-    }
-
-    public void setCuloare(String culoare) {
-        this.culoare = culoare;
-    }
-
+    
     public void setMaterialLama(String materialLama) {
         this.materialLama = materialLama;
     }
 
+    public short getPutere() {
+        return putere;
+    }
+    
     public void setPutere(short putere) {
         this.putere = putere;
+    }
+
+    public byte getCapacitateRezervor() {
+        return capacitateRezervor;
     }
 
     public void setCapacitateRezervor(byte capacitateRezervor) {

@@ -24,7 +24,7 @@ public class Motosapa extends Aparat {
         adancimeLucru = 0;     
     }
     
-    public Motosapa(String firma, String tipMotor, String materialConstructie, String culoare, short adancimeLucru, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
+    public Motosapa(String firma, String tipMotor, String materialConstructie, String culoare,short adancimeLucru, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata){
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.firma = firma;
         this.tipMotor = tipMotor;
@@ -45,37 +45,37 @@ public class Motosapa extends Aparat {
     public String getFirma() {
         return firma;
     }
+    
+    public void setFirma(String firma) {
+        this.firma = firma;
+    }
 
     public String getTipMotor() {
         return tipMotor;
+    }
+    
+    public void setTipMotor(String tipMotor) {
+        this.tipMotor = tipMotor;
     }
 
     public String getMaterialConstructie() {
         return materialConstructie;
     }
-
-    public String getCuloare() {
-        return culoare;
-    }
-
-    public int getAdancimeLucru() {
-        return adancimeLucru;
-    }
-
-    public void setFirma(String firma) {
-        this.firma = firma;
-    }
-
-    public void setTipMotor(String tipMotor) {
-        this.tipMotor = tipMotor;
-    }
-
+    
     public void setMaterialConstructie(String materialConstructie) {
         this.materialConstructie = materialConstructie;
     }
 
+    public String getCuloare() {
+        return culoare;
+    }
+    
     public void setCuloare(String culoare) {
         this.culoare = culoare;
+    }
+
+    public int getAdancimeLucru() {
+        return adancimeLucru;
     }
 
     public void setAdancimeLucru(short adancimeLucru) {
