@@ -128,16 +128,7 @@ public class ProiectPOO {
             }
         } 
         System.out.println("\n");
- 
-        aparateCuratatGeamuri.add(perieElectrica);
-        
-         for(AparatCuratatGeamuri acg:aparateCuratatGeamuri){
-             if(acg.getMaterialLamaPerie().equals("cauciuc") && acg.getAutonomie() >1 ){
-            System.out.println("Aparate de curatat geamuri: " +acg);}}
-         System.out.println("\n");
- 
-        
-              
+  
         MasinaTunsIarba masinaDeTuns = new MasinaTunsIarba();
         MasinaTunsIarba masinaElectrica = new MasinaTunsIarba("DeWalt", "galben", "metal",(short)1300, (byte)5, "cablu", "manual", (byte)12, "taiere", "iarba");
         MasinaTunsIarba masinaElectricaBosch = new MasinaTunsIarba("Bosch", "galben", "metal", (short)1000, (byte)6, "cablu", "manual", (byte)10, "taiere", "iarba");
