@@ -55,8 +55,9 @@ public class AparatCuratatGeamuri extends Aparat {
     public void setMaterialLama(String materialLamaPerie) {
         this.materialLamaPerie = materialLamaPerie;
     }
+ 
      public String getMaterialLamaPerie() {
-        return materialLamaPerie;
+          return materialLamaPerie;
     }
 
     public void setPutere(int putere) {

@@ -58,7 +58,8 @@ public class ProiectPOO {
         System.out.println("Aspirator de geamuri: "+aspiratorGeamuri);
         System.out.println("Copie aspirator de geamuri: "+aparatGeamuri+"\n");
         
-        //Vectori
+ 
+         //Vectori
      //  Aparat[] apar=new Aparat[10];
      //  apar[0]=aparatCuratatPardoseli;
      //apar[1]=aparatCuratatGeamuri;
@@ -74,6 +75,8 @@ public class ProiectPOO {
         //for(int i=0;i<apar.length;i=i+2)
         //System.out.println("Vector: "+apar[i]); 
         
+        //Vector de 10 elemente pentru fiecare clasa
+ 
         ArrayList<Aparat> aparate=new ArrayList();
         aparate.add(aparatCuratatPardoseli);
         aparate.add(aparatCuratatGeamuri);
@@ -90,7 +93,6 @@ public class ProiectPOO {
                 System.out.println("Aparate: " +apm);
            }}
            System.out.println("\n");
-        
         ArrayList<AparatCuratatPardoseli> aparateCuratatPardoseli=new ArrayList();
         aparateCuratatPardoseli.add(mop);
         aparateCuratatPardoseli.add(mopCuAburi);
@@ -102,11 +104,13 @@ public class ProiectPOO {
         aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureLavor); 
         aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureDart); 
         aparateCuratatPardoseli.add(masinaHybrid);
-          for(AparatCuratatPardoseli acp:aparateCuratatPardoseli){
-              if(acp.getLungimeCablu() > 9 && acp.getFirma().equals("Lavor") ){
-            System.out.println("Aparate de curatat pardoseli: " +acp);}}
-          System.out.println("\n");
-          
+        for (AparatCuratatPardoseli acp : aparateCuratatPardoseli) {
+           if (acp.getLungimeCablu() > 9 && acp.getFirma().equals("Lavor")) {
+               System.out.println("Aparate de curatat pardoseli: " + acp);
+           }
+       }
+         System.out.println("\n");
+ 
         ArrayList<AparatCuratatGeamuri> aparateCuratatGeamuri=new ArrayList();
         aparateCuratatGeamuri.add(stergator);
         aparateCuratatGeamuri.add(aspiratorGeamuri);
@@ -118,11 +122,20 @@ public class ProiectPOO {
         aparateCuratatGeamuri.add(aparatGeamuriTaurus);
         aparateCuratatGeamuri.add(stergatorKarcher);
         aparateCuratatGeamuri.add(perieElectrica);
+        for (AparatCuratatGeamuri acg : aparateCuratatGeamuri) {
+            if (acg.getMaterialLamaPerie().equals("cauciuc") && acg.getAutonomie() > 1) {
+                System.out.println("Aparate de curatat geamuri: " + acg);
+            }
+        } 
+        System.out.println("\n");
+ 
+        aparateCuratatGeamuri.add(perieElectrica);
         
          for(AparatCuratatGeamuri acg:aparateCuratatGeamuri){
              if(acg.getMaterialLamaPerie().equals("cauciuc") && acg.getAutonomie() >1 ){
             System.out.println("Aparate de curatat geamuri: " +acg);}}
          System.out.println("\n");
+ 
         
         
         
