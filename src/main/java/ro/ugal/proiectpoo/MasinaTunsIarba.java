@@ -85,6 +85,6 @@ public class MasinaTunsIarba extends Aparat {
     
     @Override
     public String toString(){
-        return super.toString() + ",firma = " + firma + ", culoare = " + culoare + ", material lama = " + materialLama + ", putere = " + putere + " W, capacitate rezervor = " + capacitateRezervor + "L.";
+        return super.toString() + ", firma = " + firma + ", culoare = " + culoare + ", material lama = " + materialLama + ", putere = " + putere + "W, capacitate rezervor = " + capacitateRezervor + "L.";
     }
 }

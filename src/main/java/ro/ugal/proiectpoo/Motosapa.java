@@ -17,8 +17,8 @@ public class Motosapa extends Aparat {
     
     public Motosapa(){
         super();
-        firma = "Necunoscuta";
-        tipMotor = "Necunoscut";
+        firma = " Necunoscuta";
+        tipMotor = " Necunoscut";
         materialConstructie = " Necunoscut";
         culoare = " Necunoscuta";
         adancimeLucru = 0;     
@@ -85,6 +85,6 @@ public class Motosapa extends Aparat {
     
     @Override
     public String toString(){
-        return super.toString() + ", firma = " + firma + ", tip motor = " + tipMotor + ", material constructie = " + materialConstructie + ", culoare = " + culoare + ", adancime de lucru = " + adancimeLucru + ", cm.";       
+        return super.toString() + ", firma = " + firma + ", tip motor = " + tipMotor + ", material constructie = " + materialConstructie + ", culoare = " + culoare + ", adancime de lucru = " + adancimeLucru + "cm.";       
     }
 }

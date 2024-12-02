@@ -137,7 +137,7 @@ public class ProiectPOO {
         MasinaTunsIarba masinaPeBenzinaHusqvarna = new MasinaTunsIarba("Husqvarna", "verde", "metal sudat", (short)1500, (byte)7, "benzina", "auto", (byte)25, "taiere", "iarba");
         MasinaTunsIarba masinaPeBaterii = new MasinaTunsIarba("Heinner","galben", "plastic", (short)1700, (byte)10, "benzina", "auto", (byte)30, "taiere", "iarba");
         MasinaTunsIarba masinaPeBateriiBosch = new MasinaTunsIarba("Bosch", "verde", "metal", (short)1500, (byte)8, "baterii", "manual", (byte)9, "taiere", "iarba");
-        MasinaTunsIarba masinaPeBateriiRuris = new MasinaTunsIarba("Ruris", "galben", "metal", (short)1000, (byte)18, "baterii", "manual", (byte)8, "taiere", "iarba");
+        MasinaTunsIarba masinaPeBateriiRuris = new MasinaTunsIarba("Ruris", "galben", "metal", (short)1700, (byte)18, "baterii", "manual", (byte)8, "taiere", "iarba");
         MasinaTunsIarba masinaTuns = new MasinaTunsIarba(masinaElectrica);
         
         System.out.println("Masina de tuns iarba: " + masinaDeTuns);
@@ -159,13 +159,15 @@ public class ProiectPOO {
         
         System.out.println("\n");
 
-        for(Aparat masina:masiniTuns)
-            System.out.println("Vector masini tuns iarba: " + masina);
-        System.out.println("\n");
-  
+        for(MasinaTunsIarba masina : masiniTuns){
+            if (masina.getFirma().equals("Ruris") && masina.getPutere() > 1500){
+                System.out.println("Masina de tuns iarba: " + masina);
+            }
+        }
+      
         Motosapa motosapaPeBenzina = new Motosapa();
-        Motosapa motosapaElectrica = new Motosapa("Ruris", "benzina", "metal", "negru", (short)20, "baterii", "automat",(byte) 20, "sapa", "pamant");
-        Motosapa motosapaHonda = new Motosapa("Honda", "benzina", "metal", "rosu", (short)20, "electric", "manual", (byte)17, "cultivare", "pamant");
+        Motosapa motosapaElectrica = new Motosapa("Ruris", "benzina", "plastic", "negru", (short)20, "baterii", "automat",(byte) 20, "sapa", "pamant");
+        Motosapa motosapaHonda = new Motosapa("Honda", "benzina", "plastic", "rosu", (short)20, "electric", "manual", (byte)17, "cultivare", "pamant");
         Motosapa motosapaHusqvarna = new Motosapa("Husqvarna", "benzina", "metal", "portocaliu", (short)30, "electric", "semi-auto", (byte)66, "cultivare", "pamant");
         Motosapa motosapaRuris = new Motosapa("Ruris", "benzina", "metal", "gri", (short)20, "electric", "semi-auto", (byte)54, "cultivare", "pamant");
         Motosapa motosapaTexas = new Motosapa("Texas", "benzina", "metal", "negru", (short)15, "electric", "auto", (byte)40, "cultivare", "pamant");
@@ -193,10 +195,12 @@ public class ProiectPOO {
         motosape.add(motosapaDeWalt);
         motosape.add(motosapaBenzina);
         
-        for(int i=0; i<motosape.size(); i+=2)
-            System.out.println("Vector motosape: " + motosape.get(i));
-        System.out.println("\n"); 
-        
+        for (Motosapa motosapa : motosape){
+            if (motosapa.getMaterialConstructie().equals("metal") && motosapa.getAdancimeLucru() > 20){
+                System.out.println("Motosapa: " + motosapa);
+            }
+        }
+    
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","rosu","Lavor","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","albastru","Honda","cablu","manual",(byte)20,"curatare","pereti exteriori");
         AparatSpalareCuPresiune bosch=new AparatSpalareCuPresiune(200,"motorina","usor redus","verde","Bosch","energie solara","manual",(byte)30,"curatare intensa","pavaje");
