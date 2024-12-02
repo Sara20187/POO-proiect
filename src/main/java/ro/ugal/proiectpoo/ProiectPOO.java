@@ -201,6 +201,7 @@ public class ProiectPOO {
             }
         }
     
+        AparatSpalareCuPresiune apar=new AparatSpalareCuPresiune();
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","rosu","Lavor","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","albastru","Honda","cablu","manual",(byte)20,"curatare","pereti exteriori");
         AparatSpalareCuPresiune bosch=new AparatSpalareCuPresiune(200,"motorina","usor redus","verde","Bosch","energie solara","manual",(byte)30,"curatare intensa","pavaje");
@@ -232,10 +233,13 @@ public class ProiectPOO {
         aparateSpalarePresiune.add(philips);
         aparateSpalarePresiune.add(beko);
         
-        for(Aparat apar:aparateSpalarePresiune)
-            System.out.println("Vector ASP: " +apar);
+        for(AparatSpalareCuPresiune apart:aparateSpalarePresiune)
+           if(apart.getTipMotor().equals("motorina") && apart.getPutereMaxima()>200){
+               System.out.println("Aparate cu presiune care indeplinesc conditia: "+apart);
+           }
          System.out.println("\n");
          
+        Suflanta suf=new Suflanta();
         Suflanta electrice=new Suflanta(100,24,"Bosch","alb",452,"electrica","manuala",(byte)13,"indepartarea mizeriilor","interior garaj"); 
         Suflanta peAcumulator=new Suflanta(120,48,"Greenworks","negru",620,"acumulator","manuala",(byte)15,"aspirare","terase si gradini");
         Suflanta peBenzina=new Suflanta(160,72,"Echo","galben",220,"benzina","manuala",(byte)20,"indepartarea mizeriilor","aleii si curti"); 
@@ -267,8 +271,10 @@ public class ProiectPOO {
         suflante.add(kawasaki);
         suflante.add(sakura);
         
-        for(Aparat suf:suflante)
-            System.out.println("Vector suflante: " +suf);
+        for(Suflanta sufl:suflante)
+            if(sufl.getDurataFunctionare()!=56 && sufl.getFirma().equals("Yazaki")){
+                System.out.println("Suflante care indeplinesc conditia: "+sufl);
+            }
          System.out.println("\n");
         
         AspiratorUmed aspiratorUmed1 = new AspiratorUmed();
