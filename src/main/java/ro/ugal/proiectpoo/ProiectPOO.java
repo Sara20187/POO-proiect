@@ -174,9 +174,9 @@ public class ProiectPOO {
         motosape.add(motosapaDeWalt);
         motosape.add(motosapaBenzina);
         
-        for(Aparat moto:motosape)
-            System.out.println("Vector motosape: " + moto);
-        System.out.println("\n");
+        for(int i=0; i<motosape.size(); i+=2)
+            System.out.println("Vector motosape: " + motosape.get(i));
+        System.out.println("\n"); 
         
         AparatSpalareCuPresiune lavor=new AparatSpalareCuPresiune(135,"electric","mare","baterii","rosu","Lavor","manual",(byte)15,"clatire","masini");
         AparatSpalareCuPresiune honda=new AparatSpalareCuPresiune(160,"benzina","silentios","albastru","Honda","cablu","manual",(byte)20,"curatare","pereti exteriori");
