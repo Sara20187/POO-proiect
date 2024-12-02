@@ -26,7 +26,7 @@ public class AparatCuratatGeamuri extends Aparat {
     }
     //constructor cu parametrii
 
-    public AparatCuratatGeamuri(String firma, String materialLama, int putere, int autonomie, int capacitateRezervor, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
+    public AparatCuratatGeamuri(String firma, String materialLamaPerie, int putere, int autonomie, int capacitateRezervor, String modAlimentare, String tipActionare, byte greutate, String modUtilizare, String tipSuprafata) {
         super(modAlimentare, tipActionare, greutate, modUtilizare, tipSuprafata);
         this.firma = firma;
         this.materialLamaPerie = materialLamaPerie;
@@ -52,11 +52,12 @@ public class AparatCuratatGeamuri extends Aparat {
         return firma;
     }
 
-    public void setMaterialLama(String materialLama) {
+    public void setMaterialLama(String materialLamaPerie) {
         this.materialLamaPerie = materialLamaPerie;
     }
-     public String getMaterialLama() {
-        return materialLamaPerie;
+ 
+     public String getMaterialLamaPerie() {
+          return materialLamaPerie;
     }
 
     public void setPutere(int putere) {
@@ -83,7 +84,7 @@ public class AparatCuratatGeamuri extends Aparat {
 
     @Override
     public String toString() {
-        return  super.toString() + "firma=" + firma + ", material lama=" + materialLamaPerie + ", putere=" + putere + ", autonomie=" + autonomie + ", capacitate rezervor=" + capacitateRezervor  ;
+        return  super.toString() + "firma=" + firma + ", material lama sau perie=" + materialLamaPerie + ", putere=" + putere + ", autonomie=" + autonomie + ", capacitate rezervor=" + capacitateRezervor  ;
     }
     
 }

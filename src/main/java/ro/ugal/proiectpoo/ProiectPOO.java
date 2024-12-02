@@ -38,10 +38,10 @@ public class ProiectPOO {
         AparatCuratatGeamuri aparatGeamuri=new AparatCuratatGeamuri(aspiratorGeamuri);
         AparatCuratatGeamuri aparatCuratatAburi=new AparatCuratatGeamuri("Karcher","cauciuc",100,1,200,"baterie","semimanual",(byte)2,"curatare","sticla");
         AparatCuratatGeamuri curatatorElectric=new AparatCuratatGeamuri("Bosch","material textil",200,2,400,"baterie","semimanual",(byte)2,"curatare","sticla");
-        AparatCuratatGeamuri robotCuratareGeamuri=new AparatCuratatGeamuri("IHunt","material textil",300,3,200,"baterie","automat",(byte)2,"curatare","sticla");
+        AparatCuratatGeamuri robotCuratareGeamuri=new AparatCuratatGeamuri("IHunt","material textil",300,1,200,"baterie","automat",(byte)2,"curatare","sticla");
         AparatCuratatGeamuri stergatorFlippy=new AparatCuratatGeamuri("Flippy","cauciuc",200,1,200,"baterie","manual",(byte)1,"curatare","sticla");      
         AparatCuratatGeamuri aparatGeamuriTaurus=new AparatCuratatGeamuri("Taurus","cauciuc",100,2,300,"baterie","manual",(byte)2,"curatare","sticla");       
-        AparatCuratatGeamuri stergatorKarcher=new AparatCuratatGeamuri("Karcher","cauciuc",100,1,200,"baterie","manual",(byte)1,"curatare","sticla");       
+        AparatCuratatGeamuri stergatorKarcher=new AparatCuratatGeamuri("Karcher","cauciuc",100,2,200,"baterie","manual",(byte)1,"curatare","sticla");       
         AparatCuratatGeamuri perieElectrica=new AparatCuratatGeamuri("Bosch","plastic sau textil",200,2,300,"baterie","semimanual",(byte)2,"curatare","sticla");
                 
         aparatCuratatPardoseli.pornesteAparat();
@@ -58,7 +58,25 @@ public class ProiectPOO {
         System.out.println("Aspirator de geamuri: "+aspiratorGeamuri);
         System.out.println("Copie aspirator de geamuri: "+aparatGeamuri+"\n");
         
-        //Vectori
+ 
+         //Vectori
+     //  Aparat[] apar=new Aparat[10];
+     //  apar[0]=aparatCuratatPardoseli;
+     //apar[1]=aparatCuratatGeamuri;
+     //  apar[2]=aparatCuratatSticla;  
+     //  apar[3]=aparatTaiatLemne;
+     //   apar[4]=aparatTaiatIarba;  
+     // apar[5]=aparatDeSapat;
+     // apar[6]=aparatDeAspirat;        
+     //apar[7]=aparatDeSuflat;
+     // apar[8]=trimmer;
+     //  apar[9]=aparatSpalareCuPresiune;
+                
+        //for(int i=0;i<apar.length;i=i+2)
+        //System.out.println("Vector: "+apar[i]); 
+        
+        //Vector de 10 elemente pentru fiecare clasa
+ 
         ArrayList<Aparat> aparate=new ArrayList();
         aparate.add(aparatCuratatPardoseli);
         aparate.add(aparatCuratatGeamuri);
@@ -70,12 +88,11 @@ public class ProiectPOO {
         aparate.add(aparatDeSuflat);
         aparate.add(trimmer);
         aparate.add(aparatSpalareCuPresiune);
-        
-        for(Aparat apm:aparate)//{
-            //if(apm.greutate >2 && apm.modAlimentare.equals("cablu")){
-                System.out.println("Aparate: " +apm);//}}
-        System.out.println("\n");
-        
+       for(Aparat apm:aparate){
+           if(apm.greutate >2 && apm.modAlimentare.equals("cablu")){
+                System.out.println("Aparate: " +apm);
+           }}
+           System.out.println("\n");
         ArrayList<AparatCuratatPardoseli> aparateCuratatPardoseli=new ArrayList();
         aparateCuratatPardoseli.add(mop);
         aparateCuratatPardoseli.add(mopCuAburi);
@@ -87,11 +104,13 @@ public class ProiectPOO {
         aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureLavor); 
         aparateCuratatPardoseli.add(masinaDeSpalatPardoseliDureDart); 
         aparateCuratatPardoseli.add(masinaHybrid);
-          for(Aparat acp:aparate)//{
-              //if(acp.lungimeCablu > 9 && acp.firma.equals("Karcher") ){
-            System.out.println("Aparate de curatat pardoseli: " +acp);//}}
-          System.out.println("\n");
-          
+        for (AparatCuratatPardoseli acp : aparateCuratatPardoseli) {
+           if (acp.getLungimeCablu() > 9 && acp.getFirma().equals("Lavor")) {
+               System.out.println("Aparate de curatat pardoseli: " + acp);
+           }
+       }
+         System.out.println("\n");
+ 
         ArrayList<AparatCuratatGeamuri> aparateCuratatGeamuri=new ArrayList();
         aparateCuratatGeamuri.add(stergator);
         aparateCuratatGeamuri.add(aspiratorGeamuri);
@@ -103,13 +122,13 @@ public class ProiectPOO {
         aparateCuratatGeamuri.add(aparatGeamuriTaurus);
         aparateCuratatGeamuri.add(stergatorKarcher);
         aparateCuratatGeamuri.add(perieElectrica);
-        
-         for(Aparat acg:aparate)//{
-             //if(acg.materialLamaPerie.equals("cauciuc") && acg.autonomie > 1 ){
-            System.out.println("Aparate de curatat geamuri: " +acg);//}}
-         System.out.println("\n");
-        
-              
+        for (AparatCuratatGeamuri acg : aparateCuratatGeamuri) {
+            if (acg.getMaterialLamaPerie().equals("cauciuc") && acg.getAutonomie() > 1) {
+                System.out.println("Aparate de curatat geamuri: " + acg);
+            }
+        } 
+        System.out.println("\n");
+  
         MasinaTunsIarba masinaDeTuns = new MasinaTunsIarba();
         MasinaTunsIarba masinaElectrica = new MasinaTunsIarba("DeWalt", "galben", "metal",(short)1300, (byte)5, "cablu", "manual", (byte)12, "taiere", "iarba");
         MasinaTunsIarba masinaElectricaBosch = new MasinaTunsIarba("Bosch", "galben", "metal", (short)1000, (byte)6, "cablu", "manual", (byte)10, "taiere", "iarba");
