@@ -1,9 +1,10 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
 package ro.ugal.proiectpoo;
 import java.util.*;
+import java.util.ArrayList;
 /**
  *
  * @author mi358
@@ -19,7 +20,7 @@ public class ProiectPOO {
         Aparat aparatDeSapat=new Aparat("baterie","semimanual",(byte)2,"sapat","pamant/sol");
         Aparat aparatDeAspirat=new Aparat("cablu","manual",(byte)4,"curatare","podeaua");
         Aparat aparatDeSuflat=new Aparat("baterie","manual",(byte)3,"curatare","solul de frunze");
-        Aparat trimmer=new Aparat("baterie","manual",(byte)3,"taiere","iarba");
+        Aparat aparatDeTaiatVegetatie=new Aparat("baterie","manual",(byte)3,"taiere","iarba"); //trimmer
         Aparat aparatSpalareCuPresiune=new Aparat("cablu","manual",(byte)1,"curatare","orice suprafata");  
        
         AparatCuratatPardoseli mop=new AparatCuratatPardoseli();
@@ -86,7 +87,7 @@ public class ProiectPOO {
         aparate.add(aparatDeSapat);
         aparate.add(aparatDeAspirat);
         aparate.add(aparatDeSuflat);
-        aparate.add(trimmer);
+        aparate.add(aparatDeTaiatVegetatie);
         aparate.add(aparatSpalareCuPresiune);
        for(Aparat apm:aparate){
            if(apm.greutate >2 && apm.modAlimentare.equals("cablu")){
@@ -292,19 +293,111 @@ public class ProiectPOO {
         System.out.println("aspiratorUscat3: " + aspiratorUscat3.toString());
 
         // instanțe din clasa Drujbă
-        Drujbă drujba1 = new Drujbă("Benzină", "Automat", (byte)6, "Tăiere", "Pardoseală", 40, "Benzină", "Stihl");
-        Drujbă drujba2 = new Drujbă("Cablu", "Semi-Automat", (byte)7, "Tăiere", "Pardoseală", 35, "Electric", "Husqvarna");
+        Drujbă drujba1 = new Drujbă("Benzina", "Automat", (byte)6, "Taiere", "Busteni", 40, "Benzina", "Stihl",55,1);
+        Drujbă drujba2 = new Drujbă("Cablu", "Semi-Automat", (byte)7, "Taiere", "Lemn", 60,"Electric", "Husqvarna",18,3);
         
-        System.out.println("\nInstanțe Drujbă:");
+        System.out.println("\nInstanțe Drujba:");
         System.out.println(drujba1);
         System.out.println(drujba2);
         
         // instanțe din clasa Trimmer
-        Trimmer trimmer1 = new Trimmer("Baterii", "Automat", (byte)1, "Tuns iarba", "Iarbă", true, 60, "Philips");
-        Trimmer trimmer2 = new Trimmer("Cablu", "Manual", (byte)2, "Tuns iarba", "Iarbă", false, 0, "Black & Decker");
+        Trimmer trimmer1 = new Trimmer("Baterii", "Automat", (byte)1, "Tuns iarba", "Iarba", true, 60, "Philips", 18,2000);
+        Trimmer trimmer2 = new Trimmer("Cablu", "Manual", (byte)2, "Tuns iarba", "Iarba", false, 0, "Black & Decker", 53, 1000);
         
-        System.out.println("\nInstanțe Trimmer:");
+        System.out.println("\nInstante Trimmer:");
         System.out.println(trimmer1);
         System.out.println(trimmer2);
-    }    
-}
+        
+        //drujba
+        Drujbă drujbaStandard = new Drujbă();
+        Drujbă drujbaElectrica = new Drujbă("electric", "manual", (byte)4, "taiere", "lemn", 35, "compacta", "Bosch", 20, 200);
+        Drujbă drujbaBenzina = new Drujbă("benzina", "semimanual", (byte)8, "taiere", "lemn gros", 50, "profesionala", "Husqvarna", 25, 500);
+        Drujbă drujbaUsorDeFolosit = new Drujbă("electric", "manual", (byte)3, "taiere", "ramuri mici", 30, "portabila", "Makita", 15, 150);
+        Drujbă drujbaPortabila = new Drujbă("baterie", "manual", (byte)5, "taiere", "lemn de foc", 40, "ușoara", "DeWalt", 18, 100);
+        Drujbă drujbaGreutateRedusa = new Drujbă("baterie", "manual", (byte)4, "taiere", "lemn subtire", 28, "compacta", "Black+Decker", 12, 120);
+        Drujbă drujbaMultifunctionala = new Drujbă("benzina", "semimanual", (byte)6, "taiere", "lemn și ramuri mari", 45, "multifunctionala", "Stihl", 22, 400);
+        Drujbă drujbaCopiata = new Drujbă(drujbaElectrica);
+        Drujbă drujbaProfesionala = new Drujbă("benzina", "semimanual", (byte)10, "taiere", "lemn profesional", 60, "greutate mare", "Echo", 28, 600);
+        Drujbă drujbaCompacta = new Drujbă("electric", "manual", (byte)2, "taiere", "ramuri mici", 25, "mică", "Ryobi", 10, 80);
+        //pornire si oprire pt cateva obj
+        drujbaElectrica.pornesteAparat();
+        drujbaElectrica.opresteAparat();
+        System.out.println("\nDrujba electrică: " + drujbaElectrica);
+        
+        drujbaBenzina.pornesteAparat();
+        drujbaBenzina.opresteAparat();
+        System.out.println("Drujba pe benzină: " + drujbaBenzina);
+
+        drujbaPortabila.pornesteAparat();
+        drujbaPortabila.opresteAparat();
+        System.out.println("Drujba portabilă: " + drujbaPortabila);
+        
+        ArrayList<Drujbă> drujbe = new ArrayList<>();
+        drujbe.add(new Drujbă("electric", "manual", (byte)4, "taiere", "lemn", 35, "compactă", "Bosch", 20, 200));
+        drujbe.add(new Drujbă("benzina", "semimanual", (byte)8, "taiere", "lemn gros", 50, "profesională", "Husqvarna", 25, 500));
+        drujbe.add(new Drujbă("baterie", "manual", (byte)3, "taiere", "ramuri mici", 30, "portabilă", "Makita", 15, 150));
+        drujbe.add(new Drujbă("benzina", "manual", (byte)6, "taiere", "lemn mediu", 40, "standard", "Stihl", 22, 400));
+        drujbe.add(new Drujbă("electric", "semimanual", (byte)5, "taiere", "lemn subțire", 25, "compactă", "Ryobi", 18, 300));
+        drujbe.add(new Drujbă("baterie", "automat", (byte)4, "taiere", "ramuri mici", 20, "portabilă", "Dewalt", 16, 200));
+        drujbe.add(new Drujbă("benzina", "manual", (byte)10, "taiere", "lemn dur", 55, "industrială", "Jonsered", 30, 600));
+        drujbe.add(new Drujbă("electric", "manual", (byte)3, "taiere", "scânduri", 30, "de atelier", "Black+Decker", 17, 250));
+        drujbe.add(new Drujbă("baterie", "manual", (byte)2, "taiere", "lemn mic", 15, "ușoară", "Einhell", 12, 150));
+        drujbe.add(new Drujbă("benzina", "semimanual", (byte)7, "taiere", "lemn gros", 45, "avansată", "Echo", 24, 450));
+
+       //Afișare drujba
+        for (Drujbă dr : drujbe) {
+            //
+            if(dr.getCapacitateRezervor()>20 && dr.getVitezaLantului()>200){
+            System.out.println("Drujba:"+ dr);
+            //
+            }
+        }
+        System.out.println("\n");
+        }  
+    
+        //Trimmer
+        Trimmer trimmerStandard = new Trimmer();
+        Trimmer trimmerElectric = new Trimmer("baterie", "automat", (byte)3, "tundere", "iarbă", true, 60, "Bosch", 18, 150);
+        Trimmer trimmerCuAutonomieMare = new Trimmer("baterie", "automat", (byte)4, "tundere", "iarbă", true, 90, "Makita", 20, 200);
+        Trimmer trimmerEconomic = new Trimmer("electric", "manual", (byte)2, "tundere", "iarbă fină", true, 45, "Ryobi", 10, 80);
+        Trimmer trimmerDeLux = new Trimmer("baterie", "automat", (byte)5, "tundere", "iarbă", true, 120, "Stihl", 25, 300);
+        Trimmer trimmerProfesional = new Trimmer("benzina", "manual", (byte)6, "tundere", "iarbă groasă", false, 0, "Husqvarna", 0, 400);
+        Trimmer trimmerPortabil = new Trimmer("baterie", "manual", (byte)2, "tundere", "iarbă subțire", true, 50, "Einhell", 15, 100);
+        Trimmer trimmerDurabil = new Trimmer("electric", "manual", (byte)3, "tundere", "iarbă", true, 60, "DeWalt", 18, 200);
+        Trimmer trimmerAvansat = new Trimmer("baterie", "automat", (byte)5, "tundere", "iarbă mare", true, 100, "Echo", 22, 250);
+        Trimmer trimmerCopiat = new Trimmer(trimmerElectric);
+
+        //pornire si oprire pt cateva obj
+        trimmerElectric.pornesteAparat();
+        trimmerElectric.opresteAparat();
+        System.out.println("\nTrimmer electric: " + trimmerElectric);
+
+        trimmerDeLux.pornesteAparat();
+        trimmerDeLux.opresteAparat();
+        System.out.println("Trimmer de lux: " + trimmerDeLux);
+
+        trimmerProfesional.pornesteAparat();
+        trimmerProfesional.opresteAparat();
+        System.out.println("Trimmer profesional: " + trimmerProfesional);
+        
+        //vector de tip trimmer
+        ArrayList<Trimmer> trimmere = new ArrayList<>();
+        trimmere.add(new Trimmer("baterie", "automat", (byte)3, "tundere", "iarbă", true, 60, "Bosch", 18, 150));
+        trimmere.add(new Trimmer("baterie", "automat", (byte)4, "tundere", "iarbă", true, 90, "Makita", 20, 200));
+        trimmere.add(new Trimmer("electric", "manual", (byte)2, "tundere", "iarbă fină", true, 45, "Ryobi", 10, 80));
+        trimmere.add(new Trimmer("baterie", "automat", (byte)5, "tundere", "iarbă", true, 120, "Stihl", 25, 300));
+        trimmere.add(new Trimmer("benzina", "manual", (byte)6, "tundere", "iarbă groasă", false, 0, "Husqvarna", 0, 400));
+        trimmere.add(new Trimmer("baterie", "manual", (byte)2, "tundere", "iarbă subțire", true, 50, "Einhell", 15, 100));
+        trimmere.add(new Trimmer("electric", "manual", (byte)3, "tundere", "iarbă", true, 60, "DeWalt", 18, 200));
+        trimmere.add(new Trimmer("baterie", "automat", (byte)5, "tundere", "iarbă mare", true, 100, "Echo", 22, 250));
+        trimmere.add(new Trimmer("baterie", "automat", (byte)4, "tundere", "iarbă groasă", true, 90, "Black+Decker", 19, 190));
+        trimmere.add(new Trimmer("electric", "manual", (byte)3, "tundere", "iarbă fină", true, 60, "Greenworks", 18, 175));
+        
+        //afisare 
+        for (Trimmer tr : trimmere) {
+            if (tr.getAutonomie() > 50 && tr.getCapacitateBaterie() > 15) {
+            System.out.println("Trimmer: " + tr);
+            }    
+        }
+        System.out.println("\n");
+        }
