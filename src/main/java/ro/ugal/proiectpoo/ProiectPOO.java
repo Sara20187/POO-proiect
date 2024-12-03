@@ -353,8 +353,8 @@ public class ProiectPOO {
             }
         }
         System.out.println("\n");
-        }  
-    
+        
+        
         //Trimmer
         Trimmer trimmerStandard = new Trimmer();
         Trimmer trimmerElectric = new Trimmer("baterie", "automat", (byte)3, "tundere", "iarbă", true, 60, "Bosch", 18, 150);
@@ -399,5 +399,7 @@ public class ProiectPOO {
             System.out.println("Trimmer: " + tr);
             }    
         }
+        
         System.out.println("\n");
-        }
+    }          
+}
